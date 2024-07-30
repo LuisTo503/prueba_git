@@ -1,0 +1,223 @@
+
+/* Luis Rolando Tobar Morneo */
+
+/* Variables Globales */
+:root {
+    --background: #ffffff;
+    /* Color de fondo general */
+    --foreground: #1e1e1e;
+    /* Color del texto principal */
+    --card: #ffffff;
+    /* Color de fondo para tarjetas */
+    --card-foreground: #1e1e1e;
+    /* Color del texto en tarjetas */
+    --primary: #1e1e1e;
+    /* Color para elementos destacados */
+    --primary-foreground: #ffffff;
+    /* Color del texto en elementos destacados */
+    --secondary: #e2e2e2;
+    /* Color para elementos secundarios */
+    --secondary-foreground: #1e1e1e;
+    /* Color del texto en elementos secundarios */
+    --muted: #f0f0f0;
+    /* Color para elementos atenuados */
+    --muted-foreground: #888585;
+    /* Color del texto en elementos atenuados */
+    --accent: #f0f0f0;
+    /* Color para elementos de acento */
+    --accent-foreground: #1e1e1e;
+    /* Color del texto en elementos de acento */
+    --destructive: #ffb74d;
+    /* Color para elementos destructivos */
+    --destructive-foreground: #ffffff;
+    /* Color del texto en elementos destructivos */
+    --border: #e0e0e0;
+    /* Color para bordes */
+    --input: #e0e0e0;
+    /* Color para campos de entrada */
+    --ring: #1e1e1e;
+    /* Color para el borde de enfoque */
+    --radius: 0.5rem;
+    /* Radio de borde redondeado */
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    /* Define la fuente principal */
+    background-color: var(--background);
+    /* Color de fondo */
+    color: var(--foreground);
+    /* Color del texto */
+    margin: 0;
+    /* Elimina márgenes predeterminados */
+    padding: 0;
+    /* Elimina relleno predeterminado */
+    line-height: 1.6;
+    /* Altura de línea para mejorar la legibilidad */
+    font-size: 16px;
+    /* Tamaño de fuente base */
+}
+
+/* Importar fuente adicional */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos para el contenedor principal de la página */
+.container {
+    max-width: 800px;
+    /* Ancho máximo del contenedor */
+    margin: 0 auto;
+    /* Centra el contenedor horizontalmente */
+    padding: 20px;
+    /* Relleno interno */
+    background-color: var(--card);
+    /* Color de fondo del contenedor */
+    border-radius: var(--radius);
+    /* Radio de borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+}
+
+/* Estilos para imágenes */
+.image {
+    width: 100%;
+    /* Ancho completo del contenedor padre */
+    height: 300px;
+    /* Altura fija */
+    object-fit: cover;
+    /* Ajusta la imagen sin distorsionar */
+    border-radius: var(--radius);
+    /* Radio de borde redondeado */
+}
+
+/* Estilos para encabezados */
+h1,
+h2,
+h3 {
+    margin: 0;
+    /* Elimina márgenes predeterminados */
+    font-family: Arial, sans-serif;
+    /* Fuente para los encabezados */
+}
+
+h1 {
+    font-size: 2rem;
+    /* Tamaño de fuente para h1 */
+    font-weight: bold;
+    /* Peso de fuente en negrita */
+    color: var(--primary);
+    /* Color del texto */
+    margin-bottom: 10px;
+    /* Margen inferior */
+    text-align: center;
+    /* Centra el texto */
+}
+
+h2 {
+    font-size: 1.25rem;
+    /* Tamaño de fuente para h2 */
+    font-weight: semi-bold;
+    /* Peso de fuente semi-negrita */
+    color: var(--primary);
+    /* Color del texto */
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+    margin-top: 20px;
+    /* Margen superior */
+}
+
+h3 {
+    font-size: 1.25rem;
+    /* Tamaño de fuente para h3 */
+    font-weight: semi-bold;
+    /* Peso de fuente semi-negrita */
+    color: var(--foreground);
+    /* Color del texto */
+    margin-top: 20px;
+    /* Margen superior */
+    margin-bottom: 20px;
+    /* Margen inferior */
+}
+
+/* Estilos para cuadrícula */
+.grid {
+    display: grid;
+    /* Usa el modelo de diseño de cuadrícula */
+    grid-template-columns: repeat(3, 1fr);
+    /* Tres columnas de igual tamaño */
+    gap: 10px;
+    /* Espacio entre elementos */
+    margin: 20px 0;
+    /* Margen superior e inferior */
+}
+
+/* Estilos para elementos individuales en cuadrícula */
+.grid-item {
+    background-color: var(--secondary);
+    /* Color de fondo */
+    color: var(--secondary-foreground);
+    /* Color del texto */
+    padding: 10px;
+    /* Relleno interno */
+    border-radius: var(--radius);
+    /* Radio de borde redondeado */
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+    display: flex;
+    /* Usa el modelo de diseño flexbox */
+    flex-direction: column;
+    /* Alinea elementos en columna */
+    align-items: left;
+    /* Centra el texto horizontalmente */
+}
+
+/* Estilos para etiquetas de tiempo */
+.time-label {
+    font-size: 0.75rem;
+    /* Tamaño de fuente más pequeño */
+    font-weight: normal;
+    /* Peso de fuente normal */
+    color: var(--muted-foreground);
+    /* Color del texto */
+}
+
+/* Estilos para duración del tiempo */
+.time-duration {
+    font-size: 1.25rem;
+    /* Tamaño de fuente más grande */
+    font-weight: bold;
+    /* Peso de fuente en negrita */
+    color: var(--foreground);
+    /* Color del texto */
+}
+
+/* Estilos para listas */
+ul,
+ol {
+    margin: 0;
+    /* Elimina márgenes */
+    padding: 0;
+    /* Elimina relleno */
+    list-style-position: none;
+    /* Posición del estilo de lista */
+    padding-left: 1rem;
+}
+
+/* Estilos para elementos de lista */
+ul li,
+ol li {
+    margin-bottom: 10px;
+    /* Agrega un margen inferior de 10px a cada elemento de la lista */
+    color: var(--muted-foreground);
+    /* Aplica el color del texto definido por la variable CSS --muted-foreground */
+}
+
+/* Estilos responsivos para pantallas con ancho de 400px o menos */
+@media (max-width: 400px) {
+
+    ul li,
+    ol li {
+        font-size: 15px;
+        /* Cambia el tamaño de fuente a 10px en pantallas pequeñas */
+    }
+}
